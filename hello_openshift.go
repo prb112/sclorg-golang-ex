@@ -6,6 +6,10 @@ import (
 	"os"
 )
 
+func Hello() {
+	fmt.Println("Servicing request.")
+}
+
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	response := os.Getenv("RESPONSE")
 	if len(response) == 0 {
